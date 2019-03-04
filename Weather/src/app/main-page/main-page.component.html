@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent pt-4 ">
+  <div class="brand container  ">
+    <a class="navbar-brand mr-0 ml-2" href="#">
+    <img src="./assets/logo.png" alt="Weather_Logo" width="50" height="50" >
+    <h5 class="d-inline mr-2 ml-1">Mausam</h5>
+    </a>
+    
+    
+    <form class="form-inline d-inline">
+      <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input class="form-control search "  type="search" placeholder="Search" name="Search" aria-label="Search for Location" (keyup.enter)="onsearch(search.value)" #search >
+      </div>
+    </form>
+ 
+  
+  <a href="#" (click)="getCurrentLocation()">
+      <img src="./assets/location.svg" alt="location-img" class="location rounded-circle ml-2 mr-1"></a>
+  </div>
+
+  
+  <button class="navbar-toggler" style=" background-color: #3697D1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active mr-5 mb-2">
+        <div class="links text-center">
+        <a class="nav-link" href="#" (click)="onLoginOpen()"><span class="	fas fa-sign-in-alt"></span>  {{this._weatherService.loginStatus}} <span class="sr-only">(current)</span></a></div>
+      </li>
+      <li class="nav-item mr-5 mb-2">
+        <div class="links text-center">
+        <a class="nav-link" href="#" (click)="onShareOpen()"><span class="fa fa-share"></span> Share</a></div>
+      </li>
+      <li class="nav-item mr-5 mb-2">
+          <div class="links text-center">
+          <a class="nav-link" href="#" (click)="onAboutOpen()"> About Us </a></div>
+        </li>
+      
+    </ul>
+   
+  </div>
+</nav>
+
+<app-share *ngIf="this._weatherService.shareClose"></app-share>
+<app-about-us *ngIf="this._weatherService.aboutClose"></app-about-us>
+<app-login *ngIf="this._weatherService.loginClose"></app-login>   
+<app-weather-info  *ngIf="this._weatherService.infoClose"></app-weather-info>
+

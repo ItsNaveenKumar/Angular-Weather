@@ -1,0 +1,61 @@
+.outer{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 2;
+}
+h1{
+    color:#12507f;
+    font-size: 35px;
+}
+h4{
+    color:#12507f;
+}
+
+button{
+    float: right;
+    background-color:#1da1f2;
+}
+button:hover{
+    background-color: #f7a715;
+}
+.close{
+    color:white;
+}
+h5{
+    color:#12507f;
+}
+h5:hover{
+    color: #f7a715;
+}
+ul .active h5{
+    color: #f7a715;
+}
+
+ul h5:active{
+    color: #f7a715;
+}
+
+.inner{
+    position: relative;
+    top:-30%;
+    float:right;
+    background-color: white;
+    width:110vh;
+    min-height:100vh;
+    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+input.ng-valid{
+    border: 1px solid green;
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        width:100%;
+    }
+  }

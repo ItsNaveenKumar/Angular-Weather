@@ -1,0 +1,48 @@
+button{
+    float: right;
+    background-color:#1da1f2;
+}
+button:hover{
+    background-color: #f7a715;
+}
+.close{
+    color:white;
+}
+h1{
+    color:#12507f;
+}
+.container{
+    position: relative;
+   
+    float:right;
+    background-color: white;
+    width:110vh;
+    min-height:100vh;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.facebook:hover{
+    color:#4867aa;
+    
+}
+.whatsapp:hover{
+    color:#00e676;
+}
+.twitter:hover{
+    color:#1da1f2;
+}
+.googleplus:hover{
+    color:#dd5144;
+}
+.outer{
+    position:absolute;
+    top:0%;
+    right:0;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+      width:100%;
+  }
+}

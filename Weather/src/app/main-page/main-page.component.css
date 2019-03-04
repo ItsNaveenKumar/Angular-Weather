@@ -1,0 +1,150 @@
+.logo{
+    width:35%;
+    height:35%;
+}
+
+.brand{ border-radius:50px;
+    background-color: white;
+   width: 35vw;
+   margin:0%;
+   height:60px;
+   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.location{
+    width:40px;
+    height:40px;
+    background-color: #3697D1;
+}
+.location:hover{
+    background-color: #f7a715
+}
+.links{
+    border-radius:50px;
+    width:150%;
+    background-color: white;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.search{
+
+    border-radius:50px;
+    width:100%;
+    margin: 0 auto;
+    border:1px solid darkgray;
+    
+}
+
+li div a:hover{
+    color:#f7a715
+}
+
+/* @media only screen and (max-width: 990px) {
+  .brand{
+     width:580px;
+  }
+} */
+
+/* @media only screen  and (min-width: 1250px) {
+    .brand{
+        width:36vw;
+    }
+} */
+
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #aaa;
+}
+ @media only screen  and (min-width:631px) and (max-width: 990px) {
+  .location{
+      margin:0;
+  }
+  .links{
+    margin-top:10px;
+    width:100%;
+    margin-bottom: 0;
+}
+.brand{
+    width:520px;
+}
+.search{
+    margin:0% ;
+    width:280px;
+   
+}}
+
+
+@media only screen  and (min-width:575px) and (max-width: 630px) {
+    .location{
+        margin-right: 20%;
+    }
+    .brand{
+        width:75%;
+    }
+    .search{
+        margin-top:0% ;
+        width:20vw;
+       
+    }
+    .links{
+        margin-top:10px;
+        width:100%;
+        margin-bottom: 0;
+    }
+    
+   
+  
+  } 
+
+  @media only screen   and (min-width:387px) and (max-width: 574px) {
+    .location{
+        margin-right: 20%;
+    }
+    .brand{
+        width:75%;
+    }
+    .search{
+        margin-top:10px ;
+        width:17vw;
+       
+    }
+    .links{
+        margin-top:10px;
+        width:100%;
+        margin-bottom: 0;
+    }
+    
+   
+  
+  } 
+  @media only screen   and (max-width: 386px) {
+    .location{
+        margin-right: 20%;
+    }
+    .brand{
+        width:75%;
+    }
+    .search{
+        margin-top:10px ;
+        width:5vw;
+       
+    }
+    .links{
+        margin-top:10px;
+        width:100%;
+        margin-bottom: 0;
+    }
+    
+   
+  
+  } 

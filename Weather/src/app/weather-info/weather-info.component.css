@@ -1,0 +1,151 @@
+.outer{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:2;
+}
+h1{
+    color:#12507f;
+    font-size: 35px;
+}
+.save{
+    float: right;
+    font-size:20px;
+}
+.save:hover{
+    color: #f7a715;
+}
+button{
+    float: right;
+    background-color:#1da1f2;
+}
+button:hover{
+    background-color: #f7a715;
+}
+.close{
+    color:white;
+}
+.links{
+    padding: 0;
+}
+
+.inner{
+    position: relative;
+    top:-30%;
+    float:right;
+    background-color: white;
+    width:110vh;
+    min-height:100vh;
+    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.currentimg{
+    width:100%;
+    height:100%;
+}
+td{
+    padding:0;
+    
+}
+li img{
+    width:80%;
+    height:80%;
+
+}
+#forecast li{
+    width:20%;
+}
+#forecast .active{
+    background-color: #EEEEEE;
+   
+}
+#forecast a:active{
+    background-color: #EEEEEE;
+    
+}
+#forecast li:hover{
+    background-color: #EEEEEE;
+}
+#forecast h5{
+    color:#12507f;
+    font-size: 1.5vw;
+}
+
+#forecast img{
+    width:80%;
+    height:50%;
+}
+.forecastimg{
+    width:100%;
+    height:100%;
+}
+.forecastdiv .container{
+    background-color: #EEEEEE;
+}
+.bg{
+    background-color: #c8c8c8cb;
+}
+.nobg:hover{
+    background-color: #c8c8c8cb;
+    color: #f7a715;
+}
+h6{
+    color:#12507f;
+
+}
+h2{
+    color:#1da1f2;
+    
+}
+ul h5{
+    color:#12507f;
+}
+ul .active h5{
+    color: #f7a715;
+}
+
+ul h5:active{
+    color: #f7a715;
+}
+
+
+
+#saved h5{
+    color:#12507f;
+}
+#saved h5:hover{
+    color: #f7a715;
+}
+#saved a:hover{
+    color:red;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width:100%;
+    }
+    h2{
+        font-size: 150%;
+    }
+  }
+
+  @media only screen and  (min-width:640px) and (max-width: 765px) {
+
+    #forecast h5{
+       
+        font-size: 2vw;
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 639px) {
+
+    #forecast h5{
+       
+        font-size: 3vw;
+    }
+    
+  }

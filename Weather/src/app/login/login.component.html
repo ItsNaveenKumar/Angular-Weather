@@ -1,0 +1,60 @@
+<div class="outer">
+<div class=" inner container  ">
+    <button class=" mt-4 rounded-circle btn  " (click)="onClose()"><span class="fa-1x fa fa-close close"></span></button>
+    <h1 class="mt-3 ml-3">Connect With Us</h1> 
+    <h4 class=" ml-3">To Explore More</h4>
+    
+<div class="row">
+  <div class="col-12">
+<div class="main container rounded mt-3 " >
+  <ul class="nav nav-tabs " role="tablist">
+    <li class="nav-item" style="width:50%">
+      <a class="nav-link active" data-toggle="tab" href="#signIn"><h5>SignIn</h5></a>
+    </li>
+    <li class="nav-item"  style="width:50%">
+      <a class="nav-link"  data-toggle="tab" href="#signUp"><h5>SignUp</h5></a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="signIn" class="tabs container tab-pane active text-center">
+      <form class="py-5">
+        <div *ngIf="err" class="alert alert-danger">
+         {{Emailerr}}         
+         <p>{{PassErr}}</p>
+        </div>
+
+        <input type="email" class="form-control mb-3" name="email" val="" placeholder="Email" [(ngModel)]="email" #Email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #signInEmail>
+        <input type="password" class="form-control mb-3" name="password" val="" placeholder="Password" [(ngModel)]="password" #Password="ngModel" required  pattern="[a-zA-Z0-9@_-]{6,}$" #signInPassword>
+        <a href="#" >Forget Password?</a>
+        <button type="button" class="signin btn btn-primary btn-lg d-block w-100 mt-4"  (click)="onSignIn(signInEmail,signInPassword)">Sign In</button> 
+      </form> 
+    </div>
+    <div id="signUp" class=" tabs container tab-pane fade  text-center">
+        <form class="py-5">
+            <div *ngIf="signUperr" class="alert alert-danger">
+                {{NameErr}}
+                <p>{{Emailerr}}</p>         
+                {{PassErr}}
+                <p>{{CPassErr}}</p>
+                {{MobErr}}
+            </div>
+            <div *ngIf="success" class="alert alert-success">
+              <p>Registered Successfully!!.Login Now</p>
+            </div>
+            <input type="text" class="form-control mb-3" name="name" val="" placeholder="Name" required [(ngModel)]="name" #Name="ngModel"  pattern="[a-zA-Z]*$" #signUpName>
+            <input type="email" class="form-control mb-3" name="email" val="" placeholder="Email" [(ngModel)]="signUpEmail" #Email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  #signUpemail>
+            <input type="password" class="form-control mb-3" name="password" val="" placeholder="Password"  [(ngModel)]="signUpPassword" #Password="ngModel" required  pattern="[a-zA-Z0-9@_-]{6,}$"  #signUppass>
+            <input type="password" class="form-control mb-3" name="confirmPassword" val="" placeholder="Confirm Password"  [(ngModel)]="confirmPassword" #cPassword="ngModel" required  pattern="[a-zA-Z0-9@_-]{6,}$"#signUpCpass>
+            <input type="text" class="form-control mb-3" name="mobile" val="" placeholder="Mobile No." required [(ngModel)]="mobile" #Mobile="ngModel"  pattern="[7-9][0-9]{9}$" #signUpMobile>
+            <a href="#signIn"  data-toggle="tab" >Already have account? SignIn</a>
+            <button type="reset" class="btn btn-primary btn-lg d-block w-100 mt-4"  (click)="onSignUp(signUpName,signUpemail,signUppass,signUpCpass,signUpMobile)">Sign Up</button> 
+          </form> 
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+

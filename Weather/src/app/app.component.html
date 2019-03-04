@@ -1,0 +1,45 @@
+<!-- 
+<ng-multiselect-dropdown
+[placeholder]="'Weather Layers'"
+[data]="mapWeatherLayers"
+[(ngModel)]="selectedWeatherLayer"
+[settings]="dropdownSettings.singleSelect"
+(onSelect)="addWeatherLayer()"
+(onDeSelect)="removeWeatherLayer()"
+>
+</ng-multiselect-dropdown>
+
+<div class="map">
+  
+  <div class="legend-container " *ngIf="selectedWeatherLayer.length>0">
+    <div class="legend-title">{{weatherOption.legendTitle}}</div>
+    <div class="legend-body">
+      <div class="legend-min-scale">{{weatherOption.legendMin}}</div>
+      <div class="legend-avg-scale">{{weatherOption.legendAvg}}</div>
+      <div class="legend-max-scale">{{weatherOption.legendMax}}</div>
+      <div [ngClass]="['legend-scale',weatherOption.scaleClass]"></div>
+    </div>
+  </div>
+ 
+  <agm-map  (mapClick)="placeMarker($event)"  [latitude]="latt" [longitude]="lngg" (mapReady)="doSomethingWithTheMapInstance($event)"   [minZoom]="initMap['min_zoom']" [maxZoom]="initMap['max_zoom']" [zoom]="initMap['zoom']"  >
+    <agm-marker #gm  *ngFor="let marker of markers; let i=index "  [opacity]="show"  [latitude]="marker.coord.lat" [longitude]="marker.coord.lon"  [markerDraggable]="enable" [openInfoWindow]="True" (mouseOver)="onMouseOver(infoWindow,gm)" >
+      <agm-info-window [disableAutoPan]="false" #infoWindow>
+  
+        <div>
+           {{marker.name}}</div>
+           <div>
+         {{marker.main.temp}}
+        </div>
+        
+  
+    </agm-info-window>
+    
+    </agm-marker>
+  </agm-map>
+</div>
+<app-main-page></app-main-page>
+<app-share *ngIf="this._weatherService.shareClose"></app-share>
+<app-about-us *ngIf="this._weatherService.aboutClose"></app-about-us>
+<app-login *ngIf="this._weatherService.loginClose"></app-login> -->
+
+<app-map></app-map>
